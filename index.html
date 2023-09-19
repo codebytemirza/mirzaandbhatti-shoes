@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mirza and Bhatti Shoe</title>
+    <!-- Include Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Include Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            /* Apply a light gradient background */
+            background: linear-gradient(150deg, #E5E0FF, #7786af, #160c4e);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        .navbar {
+            background-color: #FFF2F2; /* Light Pink */
+        }
+
+        .navbar-brand {
+            font-size: 24px;
+            font-weight: bold;
+            color: #7286D3; /* Light Blue */
+        }
+
+        .navbar-toggler-icon {
+            color: #12007a;
+            border: 1px solid #FFF2F2; /* Light Pink */
+        }
+
+        .form-control {
+            border: 1px solid #7286D3; /* Light Blue */
+        }
+
+        .navbar-text {
+            color: #7286D3; /* Light Blue */
+            font-weight: bold;
+        }
+
+        .container {
+            padding-top: 60px; /* Make space for the fixed top navigation */
+            text-align: center;
+        }
+
+        .description {
+            font-size: 18px;
+            margin: 20px;
+            color: #000331; /* Charcoal */
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        /* Add a custom class for blurred cards */
+        .blurred-card {
+            background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white background */
+            padding: 20px;
+            border-radius: 10px;
+            backdrop-filter: blur(10px); /* Apply backdrop blur filter */
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Update card text color to white */
+        .card-text {
+            color: #12007a; /* Charcoal */
+        }
+
+        /* Update card heading color to black */
+        .card-title {
+            color: #12007a; /* Charcoal */
+        }
+
+        /* Style the copy button */
+        .copy-button {
+            background-color: #7286D3; /* Light Blue */
+            color: #FFF2F2; /* Light Pink */
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .copy-button:hover {
+            background-color: #8EA7E9; /* Lighter Blue */
+        }
+
+        /* Style the search bar */
+        .search-bar {
+            background-color: #FFF2F2; /* Light Pink */
+            border: none;
+            color: #7286D3; /* Light Blue */
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+        }
+
+        .search-bar:focus {
+            background-color: #E5E0FF; /* Lighter Purple */
+        }
+
+        /* Style the buy button */
+        .buy-button {
+            background-color: #7286D3; /* Light Blue */
+            color: #FFF2F2; /* Light Pink */
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .buy-button:hover {
+            background-color: #8EA7E9; /* Lighter Blue */
+        }
+
+        /* Style for the image container */
+        .image-container {
+            position: relative;
+        }
+
+        /* Style for the image description on hover */
+        .image-container:hover .description {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <!-- Bootstrap Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <a class="navbar-brand text-primary" href="#">Mirza and Bhatti Shoe</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon text-primary"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <input class="form-control mr-sm-2 search-bar" type="search" placeholder="Search" aria-label="Search">
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Content Container -->
+    <div class="container mt-5">
+        <div class="row">
+            <!-- Product 1 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card blurred-card">
+                    <div class="card-body image-container">
+                        <div class="card-img-top">
+                            <img src="images/1.jpg" alt="Product 1" class="w-100 rounded">
+                        </div>
+                        <h5 class="card-title text-black text-xl font-semibold mb-2">SNAKER</h5>
+                        <p class="card-text text-dark">Price: ₨ 6,700</p>
+                        <p class="text-dark mt-4 font-bold text-2xl">Referral Code: REFGWMB</p>
+                        <button class="btn my-2 copy-button" onclick="copyReferralCode('REF12345')">Copy Referral Code</button>
+                        <a href="https://wa.me/923088403978?text=I want to buy Product 1 with Referral Code: REFGWMB" class="buy-button btn">Buy Now</a>
+                        <p class="description">This is a fantastic product that you'll love!</p>
+                    </div>
+                </div>
+            </div>
+
+                        <!-- Product 2 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card blurred-card">
+                    <div class="card-body image-container">
+                        <div class="card-img-top">
+                            <img src="images/2.jpg" alt="Product 1" class="w-100 rounded">
+                        </div>
+                        <h5 class="card-title text-black text-xl font-semibold mb-2">JOGER</h5>
+                        <p class="card-text text-dark">Price: ₨ 7000</p>
+                        <p class="text-dark mt-4 font-bold text-2xl">Referral Code: REFGGMB</p>
+                        <button class="btn my-2 copy-button" onclick="copyReferralCode('REF12345')">Copy Referral Code</button>
+                        <a href="https://wa.me/923088403978?text=I want to buy Product 2 with Referral Code: REFGGMB" class="buy-button btn">Buy Now</a>
+                        <p class="description">This is a fantastic product that you'll love!</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card blurred-card">
+                    <div class="card-body image-container">
+                        <div class="card-img-top">
+                            <img src="images/3.jpg" alt="Product 1" class="w-100 rounded">
+                        </div>
+                        <h5 class="card-title text-black text-xl font-semibold mb-2">White SNAKER</h5>
+                        <p class="card-text text-dark">Price: ₨ 4,200</p>
+                        <p class="text-dark mt-4 font-bold text-2xl">Referral Code: REFWWMB</p>
+                        <button class="btn my-2 copy-button" onclick="copyReferralCode('REF12345')">Copy Referral Code</button>
+                        <a href="https://wa.me/923088403978?text=I want to buy Product 3 with Referral Code: REFWWMB" class="buy-button btn">Buy Now</a>
+                        <p class="description">This is a fantastic product that you'll love!</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card blurred-card">
+                    <div class="card-body image-container">
+                        <div class="card-img-top">
+                            <img src="images/4.jpg" alt="Product 1" class="w-100 rounded">
+                        </div>
+                        <h5 class="card-title text-black text-xl font-semibold mb-2">Mix JOGER</h5>
+                        <p class="card-text text-dark">Price: ₨ 6,700</p>
+                        <p class="text-dark mt-4 font-bold text-2xl">Referral Code: REFMJBM</p>
+                        <button class="btn my-2 copy-button" onclick="copyReferralCode('REF12345')">Copy Referral Code</button>
+                        <a href="https://wa.me/923088403978?text=I want to buy Product 4 with Referral Code: REFMJBM" class="buy-button btn">Buy Now</a>
+                        <p class="description">This is a fantastic product that you'll love!</p>
+                    </div>
+                </div>
+            </div>
+
+                        <!-- Product 5 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card blurred-card">
+                    <div class="card-body image-container">
+                        <div class="card-img-top">
+                            <img src="images/5.jpg" alt="Product 1" class="w-100 rounded">
+                        </div>
+                        <h5 class="card-title text-black text-xl font-semibold mb-2">Casual SNAKER</h5>
+                        <p class="card-text text-dark">Price: ₨ 3,700</p>
+                        <p class="text-dark mt-4 font-bold text-2xl">Referral Code: REFCSMB</p>
+                        <button class="btn my-2 copy-button" onclick="copyReferralCode('REF12345')">Copy Referral Code</button>
+                        <a href="https://wa.me/923088403978?text=I want to buy Product 1 with Referral Code: REFCSMB" class="buy-button btn">Buy Now</a>
+                        <p class="description">This is a fantastic product that you'll love!</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 6 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card blurred-card">
+                    <div class="card-body image-container">
+                        <div class="card-img-top">
+                            <img src="images/6.jpg" alt="Product 1" class="w-100 rounded">
+                        </div>
+                        <h5 class="card-title text-black text-xl font-semibold mb-2">Leather MEN</h5>
+                        <p class="card-text text-dark">Price: ₨ 6,700</p>
+                        <p class="text-dark mt-4 font-bold text-2xl">Referral Code: REFLMMB</p>
+                        <button class="btn my-2 copy-button" onclick="copyReferralCode('REF12345')">Copy Referral Code</button>
+                        <a href="https://wa.me/923088403978?text=I want to buy Product 1 with Referral Code: REFLMMB" class="buy-button btn">Buy Now</a>
+                        <p class="description">This is a fantastic product that you'll love!</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Repeat the above product card structure for other products -->
+
+        </div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container card blurred-card ">
+            <h2 class="text-primary mb-4"><strong>Contact Us</strong> </h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="contact-info">
+                        <p class="text-primary"><strong>Abdullah Mirza</strong></p>
+                        <p>Phone Number: <a href="https://wa.me/923088403978" target="_blank">923088403978 (WhatsApp)</a></p>
+                        <p class="text-dark">Abdullah Mirza is the sales manager of Bhatti and Mirza Shoes.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="contact-info">
+                        <p class="text-primary"><strong>Hassam Bhatti</strong></p>
+                        <p>Phone Number: <a href="https://wa.me/923324278777" target="_blank">923324278777 (WhatsApp)</a></p>
+                        <p class="text-dark">Hassam Bhatti is the General manager of Bhatti and Mirza Shoes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    </div>
+
+    <div class="container mb-5">
+        <p class="text-center text-white copyright">&copy; 2023 Mirza and Bhatti Shoe. All Rights Reserved.</p>
+    </div>
+
+    <!-- JavaScript for copying referral code -->
+    <script>
+        function copyReferralCode(referralCode) {
+            const textarea = document.createElement('textarea');
+            textarea.value = referralCode;
+            document.body.appendChild(textarea);
+            textarea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textarea);
+            alert('Referral code copied to clipboard: ' + referralCode);
+        }
+    </script>
+
+    <!-- Include Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
